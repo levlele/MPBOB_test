@@ -1,0 +1,35 @@
+{% macro active(activePage='home') %}
+<header role="banner">
+	<div class="header__container">
+		<a id="MP-Logo" class="mp-logo" href="https://www.mercadopago.com/promociones/" title="Promociones de Mercado Pago">Mercado Pago</a>
+
+		<nav id="menu-mobile" class="menu__mobile">
+			<ul>
+				<li><a id="Menu-Mobile-Promociones" href="https://www.mercadopago.com/promociones/" title="Promociones y Beneficios">Promociones</a></li>
+				<li><a id="Menu-Mobile-Categoria" href="https://www.mercadopago.com/promociones/categorias/" title="Categorías">Categorías</a></li>
+				<li><a id="Menu-Desktop-Comprar-ML" href="https://www.mercadopago.com/promociones/comprar-en-mercado-libre/" title="Comprar en Mercado Libre">Comprar en Mercado Libre</a></li>
+				<li><a id="Menu-Mobile-Ingresa" href="https://www.mercadolibre.com/jms/mla/lgz/login?platform_id=mp&go=https://www.mercadopago.com/mla/accountSummary" title="Ingresa" target="_blank">Ingresa</a></li>
+				<li><a id="Menu-Mobile-Registrate" href="https://registration.mercadopago.com.ar/registration-mp?mode=mp" title="Registrate" target="_blank">Registrate</a></li>
+				<li><a id="Menu-Mobile-Help" class="mp-help" href="https://www.mercadopago.com.ar/ayuda" target="_blank">Ayuda</a></li>
+			</ul>
+		</nav>
+
+		<nav id="menu-desktop" class="menu__desktop">
+			<ul>
+				<li><a id="Menu-Desktop-Home" href="https://www.mercadopago.com/promociones/" title="Inicio" class="{%if activePage == 'home' %} active {% endif %}">Promociones</a></li>
+				<li><a id="Menu-Desktop-Categoria" href="https://www.mercadopago.com/promociones/categorias/" title="Comprar por categoría" class="{%if activePage == 'comprar_por_categoria' %} active {% endif %}">Categorías</a></li>
+				<li><a id="Menu-Desktop-Comprar-ML" href="https://www.mercadopago.com/promociones/comprar-en-mercado-libre/" title="Comprar en Mercado Libre" class="{%if activePage == 'comprar_en_mercado_libre' %} active {% endif %}">Comprar en Mercado Libre </a></li>
+				<li><a id="Menu-Desktop-Ingresa" href="https://www.mercadolibre.com/jms/mla/lgz/login?platform_id=mp&go=https://www.mercadopago.com/mla/accountSummary" title="Ingresa" target="_blank">Ingresa</a></li>
+				<li><a id="Menu-Desktop-Registrate" href="https://registration.mercadopago.com.ar/registration-mp?mode=mp" title="Registrate" target="_blank">Registrate</a></li>
+				<li><a id="Menu-Desktop-Help" href="https://www.mercadopago.com.ar/ayuda" title="Ayuda" target="_blank">Ayuda</a></li>
+			</ul>
+		</nav>
+
+		<label id="Hamburger-Icon" class="toggle-button">
+			<span class="hamburger-top"></span>
+			<span class="hamburger-middle"></span>
+			<span class="hamburger-bottom"></span>
+		</label>
+	</div>
+</header>
+{% endmacro %}

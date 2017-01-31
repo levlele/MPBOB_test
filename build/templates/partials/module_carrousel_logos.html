@@ -1,0 +1,15 @@
+<section class="carrousel">
+  <p class="main__title">Conocé nuestras mejores marcas</p>
+
+  <div id="slider-logos" class="carrousel__container swiper-container">
+    <div class="swiper-wrapper">
+      {% for logo in carrousel_logos %}
+      <div class="swiper-slide">
+        <a id="{{logo.id}}-Carrousel" href="{{logo.href}}" title="{{logo.alt}}" target="_blank">
+          <img src="{{landing_url}}{{logo.src}}" alt="{{logo.alt}}">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+.registro__container {
+	@include outer-container(100%);
+	background-color: $brand-primary;
+	text-align: center;
+
+	@media (max-width: 424px) {
+		padding: 60px 10px;
+	}
+
+	@media (min-width: 425px) and (max-width: 600px) {
+		padding: 30px;
+	}
+
+	@media (min-width: 601px) {
+		padding: 60px 0;
+	}
+
+	p {
+		color: #ffffff;
+		font-size: 1em;
+		line-height: 1.2;
+		margin: 0 0 20px 0;
+
+		span,
+		b {
+			white-space: nowrap;
+		}
+
+		@media (min-width: 1024px) {
+			font-size: em(24);
+		}
+	}
+
+	a {
+		display: inline-block;
+		padding: 10px 20px;
+		background-color: $brand-primary;
+		color: #fff;
+		border-radius: 5px;
+		border: 2px solid #fff;
+
+		@media (min-width: 1024px) {
+			font-size: 1.5em;
+			padding: 10px 30px;
+		}
+	}
+}

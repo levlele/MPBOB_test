@@ -1,0 +1,77 @@
+/*
+Si bien la altura del header se modifica automáticamente con Swiper,
+le damos una altura minima a los contenedores para evitar el salto de contenido
+hasta que las imágenes se hayan descargado y la experiencia sea más agradable.
+*/
+
+.slide-small,
+.slide-medium,
+.slide-large {
+  @media (max-width: 639px) {
+    min-height: 175px;
+  }
+
+  @media (min-width: 640px) and (max-width: 767px) {
+    min-height: 350px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    min-height: 236px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    min-height: 315px;
+  }
+
+  @media (min-width: 1280px) and (max-width: 1365px) {
+    min-height: 394px;
+  }
+
+  @media (min-width: 1366px) and (max-width: 1439px) {
+    min-height: 299px;
+  }
+
+  @media (min-width: 1440px) and (max-width: 1919px) {
+    min-height: 315px;
+  }
+
+  @media (min-width: 1920px) {
+    min-height: 420px;
+  }
+
+  @media (max-width: 1920px) {
+    max-height: 420px;
+  }
+}
+
+.slide-small,
+.slide-medium,
+.slide-large {
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.slide-small {
+  display: block;
+
+  @media (min-width: 767px) {
+    display: none;
+  }
+}
+
+.slide-medium {
+  display: none;
+
+  @media (min-width: 768px) and (max-width: 1365px) {
+    display: block;
+  }
+}
+
+.slide-large {
+  display: none;
+
+  @media (min-width: 1366px) {
+    display: block;
+  }
+}

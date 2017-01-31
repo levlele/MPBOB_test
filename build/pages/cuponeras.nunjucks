@@ -1,0 +1,62 @@
+{% extends "layout.nunjucks" %}
+
+{% block metaTags %}
+    <title>Mercado Pago Promociones | Cuponeras</title>
+    <meta name="description" content="Ahorrá al máximo y obtené beneficios con cualquier medio de pago en los mejores sitios de cupones de Argentina.">
+    <meta name="author" content="Mercado Pago">
+    <meta property="og:title" content="Mercado Pago Promociones | Cuponeras">
+    <meta property="og:description" content="Ahorrá al máximo y obtené beneficios con cualquier medio de pago en los mejores sitios de cupones de Argentina.">
+    <meta property="og:url" content="https://www.mercadopago.com.ar/promociones/categorias/cuponeras/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{landing_url}}img/share.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="315">
+{% endblock %}
+
+{% block fb_kenshoo %}
+    <!-- Facebook Pixel Code (Landings) -->
+    <script>
+    	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    	fbq('init', '832722090182710');
+    	fbq('trackCustom', 'visitantes_micrositio_cuponera');
+    </script>
+
+    <noscript>
+    	<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=832722090182710&amp;ev=visitantes_micrositio_cuponera&amp;noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Kenshoo Pixel Code (Personal) -->
+    <script type="text/javascript" src="https://services.xg4ken.com/js/kenshoo.js?cid=748f87ef-cc5d-4d24-86fc-16592b1d78c4" ></script>
+    <script type="text/javascript">
+    <!--
+    	kenshoo.trackConversion('5005','748f87ef-cc5d-4d24-86fc-16592b1d78c4',{
+    	conversionType: 'visitantes_micrositio',
+    	revenue: 0.0,
+    	currency:'USD',
+    	orderId:'',
+    	promoCode:'',
+    	customParam1:'',
+    	customParam2:'',
+    	customParamN:'' })
+    //-->
+    </script>
+    <noscript>
+    	<img src="https://5005.xg4ken.com/pixel/v1?track=1&token=748f87ef-cc5d-4d24-86fc-16592b1d78c4&conversionType=visitantes_micrositio&revenue=0.0&currency=USD&orderId=&promoCode=&customParam1=&customParam2=" width="1" height="1" />
+    </noscript>
+    <!-- End Kenshoo Pixel Code -->
+{% endblock %}
+
+{% block menu %}
+{% import 'macros/menu_desktop.nunjucks' as nav %}
+{{nav.active('comprar_por_categoria')}}
+{% endblock %}
+
+{% block content %}
+{% include "partials/page_cuponera.html" %}
+{% endblock %}

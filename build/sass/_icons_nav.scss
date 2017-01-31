@@ -1,0 +1,102 @@
+.nav__container {
+	@include outer-container(1200px);
+	@include clearfix;
+	background-color: #fff;
+
+	@media (min-width: 1024px) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+.nav__item {
+	// 2 columnas al 50% en mobile sin sombra ni hover
+	@media (min-width: 320px) {
+		width: 50%;
+		float: left;
+		text-align: center;
+
+		a {
+			display: block;
+			width: 100%;
+			height: auto;
+			text-decoration: none;
+			padding: 20px 0;
+			transition: color 300ms ease-in-out;
+
+			// Titulo Categoría
+			h2 {
+				display: block;
+				color: #333333;
+				font-weight: 300;
+				margin: 10px 0 0;
+				font-size: 18px;
+			}
+
+			// Icono
+			img {
+				display: block;
+				margin: 0 auto;
+				border: 0;
+			}
+		}
+	}
+
+	// 3 columnas al 33% en mobile
+	@media (min-width: 640px) and (max-width: 1023px) {
+		width: 33.3%;
+	}
+
+	// 6 columnas en desktop
+	@media (min-width: 1024px) {
+		@include span-columns(2);
+
+		// Colores por seccion
+		&:first-of-type:hover h2 {
+			color: $brand-indumentaria;
+		}
+		&:nth-of-type(2n):hover h2 {
+			color: $brand-deco;
+		}
+		&:nth-of-type(3n):hover h2 {
+			color: $brand-electro;
+		}
+		&:nth-of-type(4n):hover h2 {
+			color: $brand-turismo;
+		}
+		&:nth-of-type(5n):hover h2 {
+			color: $brand-cuponeras;
+		}
+		&:last-of-type:hover h2 {
+			color: $brand-otros;
+		}
+	}
+}
+
+.change {
+	transition: all 0.5s ease;
+}
+
+#Seccion-Indumentaria:hover .change {
+	fill: $brand-indumentaria;
+}
+
+#Seccion-HomeDeco:hover .change {
+	fill: $brand-deco;
+}
+
+#Seccion-Electro:hover .change {
+	fill: $brand-electro;
+}
+
+#Seccion-Turismo:hover .change {
+	fill: $brand-turismo;
+}
+
+#Seccion-Cuponera:hover .change {
+	fill: $brand-cuponeras;
+}
+
+#Seccion-Otros:hover .change {
+	fill: $brand-otros;
+}

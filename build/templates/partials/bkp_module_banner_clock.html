@@ -1,0 +1,43 @@
+{% if promo_is_on %}
+<section id="slider-banner" class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <a id="cta-slider" href="https://www.mercadopago.com/compras/promocionesybeneficios" title="Promociones y Beneficios" target="_blank">
+        <img class="slide-small" src="{{slides.src_small_00}}" alt="{{slides.alt_00}}">
+        <img class="slide-medium" src="{{slides.src_medium_00}}" alt="{{slides.alt_00}}">
+        <img class="slide-large" src="{{slides.src_large_00}}" alt="{{slides.alt_00}}">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <img class="slide-small" src="{{slides.src_small_01}}" alt="{{slides.alt_01}}">
+      <img class="slide-medium" src="{{slides.src_medium_01}}" alt="{{slides.alt_01}}">
+      <img class="slide-large" src="{{slides.src_large_01}}" alt="{{slides.alt_01}}">
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</section>
+{% else %}
+<section id="slider-banner" class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <a id="cta-slider" href="https://www.mercadopago.com/compras/promocionesybeneficios" title="Promociones y Beneficios" target="_blank">
+        <img class="slide-small" src="{{slides.src_small_00}}" alt="{{slides.alt_00}}">
+        <img class="slide-medium" src="{{slides.src_medium_00}}" alt="{{slides.alt_00}}">
+        <img class="slide-large" src="{{slides.src_large_00}}" alt="{{slides.alt_00}}">
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <img class="slide-small" src="{{slides.src_small_01}}" alt="{{slides.alt_01}}">
+      <img class="slide-medium" src="{{slides.src_medium_01}}" alt="{{slides.alt_01}}">
+      <img class="slide-large" src="{{slides.src_large_01}}" alt="{{slides.alt_01}}">
+
+      <div class="clock__container">
+        <div id="clock" class="clock"></div>
+        <div class="clock__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</section>
+{% endif %}

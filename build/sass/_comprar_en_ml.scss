@@ -1,0 +1,188 @@
+.search-shop {
+	@include outer-container(1200px);
+	@include clearfix;
+	background-color: #ffffff;
+
+	@media (max-width: 767px) {
+		padding: 20px;
+	}
+
+	@media (min-width: 768px) {
+		padding: 5% 10px 5% 0;
+	}
+
+	&__img,
+	&__info {
+		@include fill-parent;
+		@include clearfix;
+	}
+
+	&__img img {
+		display: block;
+		border: 0;
+		margin: 0 auto;
+	}
+
+	&__img {
+		@media (max-width: 767px) {
+			padding: 10% 10% 0;
+		}
+
+		@media (min-width: 768px) {
+			@include span-columns(4);
+			@include clearfix;
+			padding-left: $gutter;
+		}
+	}
+
+	&__info {
+		@media (min-width: 768px) {
+			@include span-columns(8);
+			@include clearfix;
+		}
+
+		h1 {
+			color: $brand-primary;
+		  margin-bottom: 0;
+
+		  line-height: 1.5;
+		  font-weight: 300;
+
+		  b {
+		    color: $brand-primary;
+		    font-weight: 600;
+		    white-space: nowrap;
+		  }
+
+		  span {
+		    white-space: nowrap;
+		  }
+
+		   @media (max-width: 424px) {
+		     font-size: em(18);
+		   }
+
+		   @media (min-width: 425px) and (max-width: 639px) {
+		     font-size: em(22);
+		   }
+
+		   @media (min-width: 640px) and (max-width: 767px) {
+		     font-size: em(26);
+		   }
+
+		   @media (min-width: 768px) and (max-width: 1023px)  {
+		     font-size: em(30);
+		   }
+
+		   @media (max-width: 767px) {
+				 text-align: center;
+		     padding: $gutter 10%;
+		   }
+
+		   @media (min-width: 768px) {
+				 text-align: left;
+		     font-size: em(32);
+		     margin-bottom: 20px;
+		   }
+		}
+
+		p {
+			font-size: 1em;
+			font-weight: 300;
+      color: #999;
+      margin-bottom: 0;
+
+      @media (max-width: 424px) {
+        font-size: em(18);
+      }
+
+      @media (min-width: 425px) and (max-width: 639px) {
+        font-size: em(22);
+      }
+
+      @media (min-width: 640px) and (max-width: 767px) {
+        font-size: em(26);
+      }
+
+      @media (max-width: 1023px) {
+        padding: 0 10% $gutter;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      @media (min-width:1024px) {
+        line-height: 1.2;
+        text-align: left;
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        font-size: em(26);
+      }
+
+      @media (min-width: 1024px) {
+        font-size: em(32);
+      }
+
+			@media (min-width: 768px) {
+				text-align: left;
+				padding: 0;
+				margin-bottom: 20px;
+			}
+
+			span {
+				white-space: nowrap;
+			}
+		}
+
+		form {
+			@include clearfix;
+		}
+	}
+
+	// Input de busqueda
+	&__input {
+		width: 100%;
+		margin: 0 0 10px;
+		padding: 10px 20px;
+		border: 1px solid $brand-lightgrey;
+		border-radius: 5px;
+
+		font-size: 24px;
+
+		&:focus {
+			border: 1px solid $brand-lightgrey;
+			outline: none !important;
+			box-shadow: inset 0 0 8px rgba(0,0,0,.25);
+		}
+
+		&::-webkit-input-placeholder,
+		&::-moz-placeholder,
+		&::-moz-placeholder,
+		&:-ms-input-placeholder {
+			color: $brand-lightgrey;
+		}
+	}
+
+	// Btn Buscar en ML
+	&__submit {
+		width: 100%;
+		margin: 0;
+		padding: 10px 10px;
+		border: 1px solid $brand-secondary;
+		border-radius: 3px;
+
+		font-size: 24px;
+		font-family: $base-font-family;
+		font-weight: 300;
+
+		background-color: $brand-secondary;
+		color: #ffffff;
+		-webkit-appearance: none;
+
+		cursor: pointer;
+
+		@media (min-width: 768px) {
+			width: auto;
+		}
+	}
+}

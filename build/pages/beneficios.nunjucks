@@ -1,0 +1,27 @@
+{% extends "layout.nunjucks" %}
+
+{% block metaTags %}
+  <title>Mercado Pago Promociones | Beneficios</title>
+  <meta name="description" content="Mercado Pago Promociones | Beneficios">
+  <meta name="author" content="Mercado Pago">
+  <meta property="og:title" content="Mercado Pago Promociones | Beneficios">
+  <meta property="og:description" content="Mercado Pago Promociones | Beneficios">
+  <meta property="og:url" content="{{landing_url}}beneficios.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{landing_url}}img/share.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="315">
+{% endblock %}
+
+{% block fb_kenshoo %}
+{% endblock %}
+
+{% block menu %}
+{% import 'macros/menu_desktop.nunjucks' as nav %}
+{{nav.active('beneficios')}}
+{% endblock %}
+
+{% block content %}
+{% include "partials/page_beneficios.html" %}
+{% endblock %}

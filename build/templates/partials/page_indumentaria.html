@@ -1,0 +1,67 @@
+<main id="panel">
+	{% include '../partials/module_banner.html' %}
+
+	<section id="indumentaria" class="category__container">
+		{% import 'macros/menu_categorias.nunjucks' as nav %}
+		{{nav.active('indumentaria')}}
+
+		<div class="category">
+			<div class="category__img">
+				<img src="{{landing_url}}{{indumentaria_info.src}}" alt="{{indumentaria_info.alt}}">
+			</div>
+			<div class="category__desc">
+				<h1>{{indumentaria_info.h1}}</h1>
+				<p>{{indumentaria_info.subtitulo}}</p>
+				<p>{{indumentaria_info.p}}</p>
+			</div>
+
+			<div style="clear:both;"></div>
+
+			<h3 class="category__title">Mujer</h3>
+			<div class="category__logos">
+				{% for logo in indumentaria_logos_mujer %}{% if logo.active %}
+				<div class="category__logo">
+					<a id="{{logo.id}}" {% if logo.highlight %}class="highlight"{% endif %} href="{{logo.href}}" title="{{logo.title}}" target="_blank">
+						<img src="{{landing_url}}{{logo.src}}" alt="{{logo.alt}}">
+					</a>
+				</div>
+				{% endif %}{% endfor %}
+			</div>
+
+			<h3 class="category__title">Hombre</h3>
+			<div class="category__logos">
+				{% for logo in indumentaria_logos_hombre %}{% if logo.active %}
+				<div class="category__logo">
+					<a id="{{logo.id}}" {% if logo.highlight %}class="highlight"{% endif %} href="{{logo.href}}" title="{{logo.title}}" target="_blank">
+						<img src="{{landing_url}}{{logo.src}}" alt="{{logo.alt}}">
+					</a>
+				</div>
+				{% endif %}{% endfor %}
+			</div>
+
+			<h3 class="category__title">Unisex</h3>
+			<div class="category__logos">
+				{% for logo in indumentaria_logos_unisex %}{% if logo.active %}
+				<div class="category__logo">
+					<a id="{{logo.id}}" {% if logo.highlight %}class="highlight"{% endif %} href="{{logo.href}}" title="{{logo.title}}" target="_blank">
+						<img src="{{landing_url}}{{logo.src}}" alt="{{logo.alt}}">
+					</a>
+				</div>
+				{% endif %}{% endfor %}
+			</div>
+
+			<h3 class="category__title">Niños</h3>
+			<div class="category__logos">
+				{% for logo in indumentaria_logos_niños %}{% if logo.active %}
+				<div class="category__logo">
+					<a id="{{logo.id}}" {% if logo.highlight %}class="highlight"{% endif %} href="{{logo.href}}" title="{{logo.title}}" target="_blank">
+						<img src="{{landing_url}}{{logo.src}}" alt="{{logo.alt}}">
+					</a>
+				</div>
+				{% endif %}{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	{% include '../partials/module_registro.html' %}
+</main>

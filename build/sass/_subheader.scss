@@ -1,0 +1,55 @@
+.main__title,
+.media__title {
+ @include outer-container(1200px);
+ background-color: #ffffff;
+ color: #999;
+ margin-bottom: 0;
+
+ text-align: center;
+ line-height: 1.5;
+ font-weight: 300;
+
+ b {
+   color: $brand-primary;
+   font-weight: 600;
+   white-space: nowrap;
+ }
+
+ span {
+   white-space: nowrap;
+ }
+
+  @media (max-width: 424px) {
+    font-size: em(18);
+  }
+
+  @media (min-width: 425px) and (max-width: 639px) {
+    font-size: em(22);
+  }
+
+  @media (min-width: 640px) and (max-width: 767px) {
+    font-size: em(26);
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px)  {
+    font-size: em(30);
+  }
+
+  @media (max-width: 1023px) {
+    padding: $gutter 10%;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: em(32);
+    padding: $gutter 15%;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: em(32);
+    padding: $gutter 15%;
+  }
+
+  @media (min-width: 1280px) {
+    padding: $gutter 10%;
+  }
+}

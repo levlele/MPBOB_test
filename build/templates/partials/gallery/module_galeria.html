@@ -1,0 +1,98 @@
+<section>
+	<div class="gallery">
+		<div class="gallery__row">
+			{# Loopear productos y mostrar los que esten activos #}
+			{% for producto in productos %}{% if producto.active %}
+			{# Mostrar si mpbox_descuento_boton = true #}
+			{% if galeria.mpbox_descuento_boton %}
+			<div class="gallery__item">
+				{% if producto.logo %}
+				<div class="item__logo">
+					<img src="{{promo_url}}{{producto.logo}}" alt="{{producto.alt}}">
+				</div>
+				{% endif %}
+				<div class="item__img">
+					<a id="promociones-{{producto.id}}-img" href="{{producto.href|safe}}" title="{{producto.title}}" target="_blank">
+						<img src="{{promo_url}}{{producto.img}}" alt="{{producto.alt}}">
+					</a>
+				</div>
+				{% if galeria.mpbox_psj %}
+				{% if producto.psj_12x %}
+				<div class="item__psj">
+					<img src="{{landing_url}}img/psj_12x.jpg" alt="PSJ 12x 6x">
+				</div>
+				{% elseif producto.psj_3x %}
+				<div class="item__psj">
+					<img src="{{landing_url}}img/psj_3x.jpg" alt="PSJ 3x">
+				</div>
+				{% elseif producto.codigo %}
+				<div class="item__code">
+					{{producto.codigo_txt}}&nbsp;<b>{{producto.codigo_code}}</b>
+				</div>
+				{% elseif producto.extra %}
+				<div class="item__info">
+					{{producto.extra_txt}}
+				</div>
+				{% else %}
+				<div class="item__code">
+					&nbsp;
+				</div>
+				{% endif %}
+				{% endif %}
+				{% if producto.descuento %}
+				<div class="item__discount">
+					{% if producto.descuento_txt %}<p>Hasta</p>
+					{% else %}<p>&nbsp;</p>{% endif %}
+					<p class="discount-number">{{producto.descuento_num}}{% if producto.sup %}&nbsp;<sup>{{producto.sup_num}}</sup>{% endif %}</p>
+					<p>{{producto.text | safe}}</p>
+				</div>
+				<div class="item__btn">
+					<a id="promociones-{{producto.id}}-btn" href="{{producto.href|safe}}" title="{{producto.title}}" target="_blank">VER MÁS&nbsp;&gt;</a>
+				</div>
+				{% endif %}
+			</div>
+			{# Mostrar si mpbox_nombre_boton = true #}
+			{% elif galeria.mpbox_nombre_boton %}
+			<div class="gallery__item">
+				{% if producto.logo %}
+				<div class="item__logo">
+					<img src="{{promo_url}}{{producto.logo}}" alt="{{producto.alt}}">
+				</div>
+				{% endif %}
+				<div class="item__img">
+					<a id="{{producto.id}}-Img" href="{{producto.href|safe}}" title="{{producto.title}}" target="_blank">
+						<img src="{{promo_url}}{{producto.img}}" alt="{{producto.alt}}">
+					</a>
+				</div>
+				{% if producto.psj_12x %}
+				<div class="item__psj">
+					<img src="{{landing_url}}img/psj_12x.jpg" alt="PSJ 12x 6x">
+				</div>
+				{% elseif producto.psj_3x %}
+				<div class="item__psj">
+					<img src="{{landing_url}}img/psj_3x.jpg" alt="PSJ 3x">
+				</div>
+				{% elseif producto.codigo %}
+				<div class="item__code">
+					{{producto.codigo_txt}}&nbsp;<b>{{producto.codigo_code}}</b>
+				</div>
+				{% elseif producto.extra %}
+				<div class="item__info">
+					{{producto.extra_txt}}
+				</div>
+				{% endif %}
+				{% if producto.text_only %}
+				<div class="item__text">
+					<p>{{producto.text | safe}}</p>
+				</div>
+				<div class="item__btn no-margin">
+					<a id="{{producto.id}}-Btn" href="{{producto.href|safe}}" title="{{producto.title}}" target="_blank">VER MÁS&nbsp;&gt;</a>
+				</div>
+				{% endif %}
+			</div>
+			{% endif %}
+			{% endif %}{% endfor %}
+		</div>
+	</div>
+</section>
+{# Ir agregando variables de mpbox en condicionales #}

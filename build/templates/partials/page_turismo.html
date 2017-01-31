@@ -1,0 +1,32 @@
+<main id="panel">
+	{% include '../partials/module_banner.html' %}
+
+	<section id="turismo" class="category__container">
+		{% import 'macros/menu_categorias.nunjucks' as nav %}
+		{{nav.active('turismo')}}
+
+		<div class="category">
+
+			<div class="category__img">
+				<img src="{{landing_url}}{{turismo_info.src}}" alt="{{turismo_info.alt}}">
+			</div>
+			<div class="category__desc">
+				<h1>{{turismo_info.h1}}</h1>
+				<p>{{turismo_info.subtitulo}}</p>
+				<p>{{turismo_info.p}}</p>
+			</div>
+
+			<div class="category__logos">
+				{% for logo in turismo_logos %}{% if logo.active %}
+				<div class="category__logo">
+					<a id="{{logo.id}}" {% if logo.highlight %}class="highlight"{% endif %} href="{{logo.href}}" title="{{logo.title}}" target="_blank">
+						<img src="{{landing_url}}{{logo.src}}" alt="{{logo.alt}}">
+					</a>
+				</div>
+				{% endif %}{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	{% include '../partials/module_registro.html' %}
+</main>

@@ -1,0 +1,146 @@
+.benefit__container {
+	@include outer-container(1200px);
+	@include clearfix;
+	background-color: #ffffff;
+  padding-bottom: 20px;
+
+	h3 {
+		text-align: center;
+    color: #333;
+		font-size: 2em;
+		font-weight: 300;
+		line-height: 1.2;
+		padding: 20px;
+		margin: 0;
+	}
+
+  h4 {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    font-size: 1.2em;
+		font-weight: 300;
+
+    b {
+      color: $brand-primary;
+    }
+  }
+
+  @at-root {
+    .benefit {
+    	@include fill-parent;
+      @include clearfix;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+
+			display: -webkit-flex;
+			-webkit-flex-direction: row;
+			-webkit-flex-wrap: wrap;
+
+			-webkit-justify-content: center;
+			-webkit-align-items: center;
+			-webkit-align-content: center;
+
+			@media (min-width: 320px) and (max-width: 639px) {
+				padding: 20px 40px;
+			}
+
+			@media (min-width: 640px) {
+				padding: 20px;
+			}
+
+      &__img {
+				@media (min-width: 320px) and (max-width: 639px) {
+					@include fill-parent;
+				}
+
+				@media (min-width: 640px) {
+					@include span-columns(5);
+				}
+
+        img {
+          display: block;
+          margin: 0 auto;
+          width: 200px;
+          height: auto;
+        }
+      }
+
+      &__info {
+				@media (min-width: 320px) and (max-width: 639px) {
+					@include fill-parent;
+					margin-top: 20px;
+				}
+
+				@media (min-width: 640px) {
+					@include span-columns(7);
+					@include omega;
+				}
+      }
+
+			&__title {
+				color: $brand-primary;
+				font-size: 1.8em;
+			}
+
+      &__text {
+        color: #333;
+        font-size: 1em;
+        line-height: 1.2;
+        margin-bottom: 1em;
+
+        span,
+				a {
+          color: $brand-primary;
+					text-decoration: none;
+        }
+      }
+
+			&__subtitle {
+				// border-left: 3px solid $brand-primary;
+				// padding-left: 5px;
+				color: #333;
+				font-weight: 600;
+			}
+
+			&__subtitle-text {
+				font-size: 14px;
+			}
+
+			&__subtitle-text-green {
+				font-size: 14px;
+				color: #093;
+				margin-bottom: 0;
+			}
+			@media (min-width: 320px) and (max-width: 840px) {
+				&__subtitle-text-green + &__subtitle-text-green {
+					margin-top: 10px;
+				}
+			}
+
+      &__logos {
+				margin-top: 10px;
+				margin-bottom: 30px;
+      }
+    }
+
+		.icon-clock {
+			display: inline-block;
+			height: 12px;
+			width: 12px;
+			background-image: url('../img/icon-clock.svg');
+		 	background-size: 12px 12px;
+			margin-right: 5px;
+		}
+
+		.icon-calendar {
+			@extend .icon-clock;
+			background-image: url('../img/icon-calendar.svg');
+		}
+	}
+}

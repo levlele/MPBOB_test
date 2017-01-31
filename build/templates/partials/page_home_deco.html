@@ -1,0 +1,30 @@
+<main id="panel">
+	{% include '../partials/module_banner.html' %}
+
+	<section id="home_deco" class="category__container">
+		{% import 'macros/menu_categorias.nunjucks' as nav %}
+		{{nav.active('home_deco')}}
+
+		<div class="category">
+			<div class="category__img">
+				<img src="{{landing_url}}{{homedeco_info.src}}" alt="{{homedeco_info.alt}}">
+			</div>
+			<div class="category__desc">
+				<h1>{{homedeco_info.h1}}</h1>
+				<p>{{homedeco_info.subtitulo}}</p>
+				<p>{{homedeco_info.p}}</p>
+			</div>
+			<div class="category__logos">
+				{% for logo in homedeco_logos %}{% if logo.active %}
+				<div class="category__logo">
+					<a id="{{logo.id}}" {% if logo.highlight %}class="highlight"{% endif %} href="{{logo.href}}" title="{{logo.title}}" target="_blank">
+						<img src="{{landing_url}}{{logo.src}}" alt="{{logo.alt}}">
+					</a>
+				</div>
+				{% endif %}{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	{% include '../partials/module_registro.html' %}
+</main>

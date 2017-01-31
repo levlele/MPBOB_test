@@ -1,0 +1,62 @@
+.carrousel {
+	margin: $gutter 0;
+	text-align:center;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+
+	@media (max-width: 1199px) {
+		padding: $gutter;
+	}
+
+	@media (min-width: 1200px) {
+		padding: 0 0 $gutter*2;
+	}
+
+	.main__title {
+		line-height: 1.2;
+	}
+
+	&__container {
+		@include outer-container(1200px);
+		@include clearfix;
+
+		a {
+			display: block;
+			width: 100%;
+			height: auto;
+			position: relative;
+			border: 1px solid #999;
+
+			//Icon + Overlay on Hover
+			&::after {
+				content:'';
+				position:absolute;
+				z-index: 0;
+				width:100%;
+				height:100%;
+
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+
+				opacity: 0;
+				background: url('../img/plus.svg') center center no-repeat;
+				background-color: rgba(255,255,255,.9);
+				transition: all .3s ease-in-out;
+			}
+
+			&:hover::after {
+				opacity: 1;
+			}
+		}
+
+		img {
+			display: block;
+			max-width: 190px;
+			width: 100%;
+			height: auto;
+			border: 0;
+		}
+	}
+}

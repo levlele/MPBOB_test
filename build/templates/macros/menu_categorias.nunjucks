@@ -1,0 +1,12 @@
+{% macro active(activePage='indumentaria') %}
+<nav>
+	<ul>
+		<li><a id="Tab-Indumentaria" href="https://www.mercadopago.com/promociones/categorias/indumentaria" title="Indumentaria" {%if activePage == 'indumentaria' %}class="active"{% endif %}>Indumentaria</a></li>
+		<li><a id="Tab-HomeDeco" href="https://www.mercadopago.com/promociones/categorias/home-deco" title="Home &amp; Deco" {%if activePage == 'home_deco' %}class="active"{% endif %}>Home &amp; Deco</a></li>
+		<li><a id="Tab-Electro" href="https://www.mercadopago.com/promociones/categorias/electro" title="Electrónica y Accesorios" {%if activePage == 'electro' %}class="active"{% endif %}>Electro</a></li>
+		<li><a id="Tab-Turismo" href="https://www.mercadopago.com/promociones/categorias/turismo" title="Turismo" {%if activePage == 'turismo' %}class="active"{% endif %}>Turismo</a></li>
+		<li><a id="Tab-Cuponera" href="https://www.mercadopago.com/promociones/categorias/cuponeras" title="Cuponeras" {%if activePage == 'cuponeras' %}class="active"{% endif %}>Cuponeras</a></li>
+		<li><a id="Tab-Otros" href="https://www.mercadopago.com/promociones/categorias/otros" title="Otros" {%if activePage == 'otros' %}class="active"{% endif %}>Otros</a></li>
+	</ul>
+</nav>
+{% endmacro %}

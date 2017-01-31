@@ -1,0 +1,35 @@
+<main id="panel">
+	{% include '../partials/module_banner.html' %}
+
+	<section id="electro" class="category__container">
+		{% import 'macros/menu_categorias.nunjucks' as nav %}
+		{{nav.active('electro')}}
+
+		<div class="category">
+			<div class="category__img">
+				<img src="{{landing_url}}{{electro_info.src}}" alt="Electrónica y Accesorios">
+			</div>
+			<div class="category__desc">
+				<h1>{{electro_info.h1}}</h1>
+				<p>{{electro_info.subtitulo}}</p>
+				<p>{{electro_info.p}}</p>
+			</div>
+
+			<div class="category__logos">
+				{% for logo in electro_logos %}
+				{% if logo.active %}
+
+				<div class="category__logo">
+					<a id="{{logo.id}}" {% if logo.highlight %}class="highlight"{% endif %} href="{{logo.href}}" title="{{logo.title}}" target="_blank">
+						<img src="{{landing_url}}{{logo.src}}" alt="{{logo.alt}}">
+					</a>
+				</div>
+
+				{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	{% include '../partials/module_registro.html' %}
+</main>

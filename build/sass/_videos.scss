@@ -1,0 +1,222 @@
+.media {
+  @include fill-parent;
+  @include clearfix;
+	background-color: #ffffff;
+  padding: $gutter 0;
+
+  &__container {
+    @include outer-container(1200px);
+    @include clearfix;
+
+    @media (max-width: 1200px) {
+      padding: 0 $gutter;
+    }
+  }
+
+  &__img {
+    display: block;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+
+    text-decoration: none;
+    color: #ffffff;
+
+    // Sombra con pseudo elemento
+    @media (min-width: 1200px) {
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+
+    // Icono Play
+    &::before {
+      content:'';
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      background: url('#{$landing_url}/img/playShadow.png') center center no-repeat;
+      background-size: 90px 90px;
+    }
+  }
+
+  &__text {
+    h2,
+    p {
+      color: #999;
+      margin-bottom: 0;
+      font-weight: 300;
+
+      @media (max-width: 424px) {
+        font-size: em(18);
+      }
+
+      @media (min-width: 425px) and (max-width: 639px) {
+        font-size: em(22);
+      }
+
+      @media (min-width: 640px) and (max-width: 767px) {
+        font-size: em(26);
+      }
+
+      @media (max-width: 767px) {
+        padding: $gutter 10%;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        line-height: 1.2;
+        text-align: left;
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        font-size: em(26);
+      }
+
+      @media (min-width: 1024px) {
+        font-size: em(32);
+      }
+    }
+
+    h2 {
+      @media (min-width: 768px) and (max-width: 1023px) {
+        margin-top: 33px;
+      }
+
+      @media (min-width: 1024px) and (max-width: 1279px) {
+        margin-top: 103px;
+      }
+
+      @media (min-width: 1280px) {
+        margin-top: 122px;
+      }
+    }
+
+    p {
+      @media (min-width: 1024px) and (max-width: 1279px) {
+        margin-top: 36px;
+      }
+
+      @media (min-width: 1280px) {
+        margin-top: 55px;
+      }
+    }
+
+    a {
+      display: block;
+      color: $brand-primary;
+      margin-bottom: 0;
+      font-weight: 300;
+
+      @media (max-width: 424px) {
+        font-size: em(18);
+      }
+
+      @media (min-width: 425px) and (max-width: 639px) {
+        font-size: em(22);
+      }
+
+      @media (min-width: 640px) and (max-width: 767px) {
+        font-size: em(26);
+      }
+
+      @media (max-width: 767px) {
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: $gutter;
+      }
+
+      @media (min-width: 768px) {
+        line-height: 1.2;
+        text-align: left;
+        margin-top: 10px;
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        font-size: em(26);
+      }
+
+      @media (min-width: 1024px) {
+        font-size: em(32);
+        margin-top: 20px;
+      }
+
+      span {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__item {
+    @include fill-parent;
+    @include clearfix;
+
+    .media__img {
+      @media (max-width: 425px) {
+        height: 160px;
+      }
+
+      @media (min-width: 426px) and (max-width: 767px) {
+        height: 320px;
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        height: 380px;
+      }
+
+      @media (min-width: 1024px) and (max-width: 1199px) {
+        height: 480px;
+      }
+
+      @media (min-width: 1200px) {
+        height: 577px;
+      }
+    }
+  }
+
+  &__item--half {
+    @media (max-width: 767px) {
+      @include fill-parent;
+      @include clearfix;
+    }
+
+    @media (min-width: 768px) {
+      @include span-columns(6);
+    }
+
+    .media__img {
+      @media (max-width: 1023px) {
+        height: 160px;
+      }
+
+      @media (min-width: 1024px) {
+        height: 320px;
+      }
+    }
+  }
+}
+
+#video-01 { background: url('#{$landing_url}/img/videoScreen.jpg') center center no-repeat; background-size: cover; }
+#video-02 { background: url('#{$landing_url}/img/video_compraporcat.jpg') center center no-repeat; background-size: cover;}
+#video-03 { background: url('#{$landing_url}/img/video_compraenml.jpg') center center no-repeat; background-size: cover;}

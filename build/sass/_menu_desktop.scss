@@ -1,0 +1,74 @@
+.menu__desktop {
+	display: none;
+
+	@media (min-width: 1024px) {
+		float: right;
+		display: block;
+		text-align: center;
+	}
+
+	ul {
+		display: inline-block;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		line-height: 41px;
+
+		li {
+			display: inline-block;
+			padding: 0;
+
+			a {
+				display: inline-block;
+				color: $brand-primary;
+				font-size: 14px;
+				line-height: 41px;
+				text-decoration: none;
+				padding: 0px 10px;
+				text-rendering: optimizeLegibility;
+
+				&.active {
+					font-weight: bold;
+				}
+			}
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:nth-child(3) a {
+				padding-right: 20px;
+			}
+
+			// Ingresa
+			&:nth-child(4) a {
+				padding-left: 20px;
+				border-left: 1px solid #ebebeb;
+			}
+
+			// Ingresa + Registrate
+			&:nth-child(4) a,
+			&:nth-child(5) a {
+				color: #888888;
+			}
+
+			// Icono Help
+			&:last-child a {
+				display: block;
+				width: 15px;
+				height: 41px;
+				padding: 0;
+				margin-right: 10px;
+				text-indent: -31000px;
+
+				background: url('#{$landing_url}/img/help.svg') no-repeat center center;
+				background-size: 15px 15px;
+
+				@media (min-width: 1280px) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

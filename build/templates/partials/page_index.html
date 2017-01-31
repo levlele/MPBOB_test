@@ -1,0 +1,13 @@
+<main id="panel" role="main">
+	{% include '../partials/module_banner_slider.html' %}
+	<h1 id="title" class="main__title">Disfrutá de increíbles ofertas en los mejores sitios online del país y comprá de forma segura con <b>Mercado Pago</b></h1>
+	{% if promo_is_on %}
+	{% include '../partials/gallery/module_galeria.html' %}
+	{% else %}
+	{% include '../partials/module_icons_nav.html' %}
+	{% endif %}
+	{% include '../partials/module_medios.html' %}
+	{% include '../partials/module_videos.html' %}
+	{% include '../partials/module_apps.html' %}
+	{% include '../partials/module_registro.html' %}
+</main>

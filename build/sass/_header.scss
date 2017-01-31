@@ -1,0 +1,106 @@
+header {
+	border-bottom: 1px solid #ebebeb;
+	background-color: #fff;
+	max-height: 55px;
+	overflow-y: hidden;
+
+	.header__container {
+		@include outer-container(1200px);
+		@include clearfix;
+		padding: 7px 0;
+
+		// Menu Hamburguesa
+		label {
+			display: block;
+			width: 56px;
+			height: 41px;
+			float: right;
+			cursor: pointer;
+			position: relative;
+
+			span {
+				display: block;
+				width: 26px;
+				height: 4px;
+				position: absolute;
+				top: 50%;
+				left: 14px;
+				background-color: $brand-primary;
+				-webkit-border-radius: 2px;
+				border-radius: 2px;
+				-webkit-transition: all .1s ease-out;
+				transition: all .1s ease-out;
+
+				&.hamburger-top {
+					margin-top: -10px;
+				}
+				&.hamburger-middle {
+					margin-top: -2px;
+				}
+				&.hamburger-bottom {
+					margin-top: 6px;
+				}
+			}
+
+			// Animación crear cruz
+			span.on {
+				&.hamburger-top {
+					-webkit-transform: translate(0,8px) rotate(40deg);
+					-ms-transform: translate(0,8px) rotate(40deg);
+					-moz-transform: translate(0,8px) rotate(40deg);
+					-o-transform: translate(0,8px) rotate(40deg);
+					transform: translate(0,8px) rotate(40deg);
+				}
+				&.hamburger-middle {
+					-webkit-transform: scale(0,0);
+					-ms-transform: scale(0,0);
+					-moz-transform: scale(0,0);
+					-o-transform: scale(0,0);
+					transform: scale(0,0);
+				}
+				&.hamburger-bottom {
+					-webkit-transform: translate(0,-8px) rotate(-40deg);
+					-ms-transform: translate(0,-8px) rotate(-40deg);
+					-moz-transform: translate(0,-8px) rotate(-40deg);
+					-o-transform: translate(0,-8px) rotate(-40deg);
+					transform: translate(0,-8px) rotate(-40deg);
+				}
+			}
+		}
+
+		@media (min-width: 1024px) {
+			label {
+				display: none;
+			}
+		}
+	}
+}
+
+.mp-logo {
+	float: left;
+	display: block;
+	width: 59px;
+	height: 41px;
+
+	margin: 0 0 0 10px;
+	text-indent: -31000px;
+	text-decoration:none;
+
+	background: url('#{$landing_url}/img/logo_mp_mobile.png') no-repeat;
+	background-size: 59px 41px;
+
+	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		background: url('#{$landing_url}/img/logo_mp_mobile_2x.png') no-repeat;
+		background-size: 59px 41px;
+	}
+
+	@media (min-width: 640px) {
+		background: url('#{$landing_url}/img/logo_mp.png') no-repeat;
+		background-size: 160px 41px;
+		width: 160px;
+	}
+
+	@media (min-width: 1280px) {
+		margin-left: 0;
+	}
+}

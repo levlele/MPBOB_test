@@ -1,0 +1,42 @@
+@import "node_modules/bourbon/app/assets/stylesheets/bourbon"; // Mixins libreria Bourbon
+// $visual-grid: true !default;
+// $visual-grid-color: rgba(100,50,100,.5) !default;
+// $visual-grid-index: front !default;
+@import "node_modules/bourbon-neat/app/assets/stylesheets/neat"; // Grilla libreria Bourbon Neat
+@import "base/base"; // Estilos base
+@import "brand"; // Variables colores brandbook MP
+
+// Reemplazar ".." por "https://www.mercadopago.com/org-img/MP3/promociones/xx/xxxx/xxx sin /"
+$landing_url : 'https://www.mercadopago.com/org-img/MP3/promociones/ar/2017/BOB';
+
+html { height: 100%; padding: 0; margin: 0; }
+body { height: 100%; padding: 0; margin: 0; overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body, main, section {	background-color: #ffffff; }
+
+// Partials - Cargar en el orden en que se muestran en la página, cargar últimos los de las internas
+@import "header"; // Módulo Header
+@import "menu_mobile"; // Menu desplegable mobile
+@import "menu_desktop"; // Menu desktop
+
+@import "vendor_swiper"; // Estilos básicos vendor Swiper, NO tocar
+@import "slider"; // Módulo Slider header
+
+@import "subheader"; // Titulares h1, h2
+@import "gallery"; // Módulo galeria de productos
+@import "medios_de_pago_estilos_api"; // Estilos API, NO tocar
+@import "medios_de_pago"; // Módulo Medios de pago, alimentados con la API de MP
+
+@import "videos"; // Módulo Videos
+@import "apps"; // Módulo Apps
+@import "registro"; // Módulo Registro
+@import "footer"; // Módulo Footer + Redes sociales - Falta cambiar png por svg
+@import "vendor_venobox"; // Estilos básicos vendor Venobox, NO tocar
+@import "lato"; // Tipografia MP - Cargar después de los estilos necesarios para la Home
+
+@import "icons_nav"; // Módulo Navegacion iconos categorias
+@import "categorias"; // Categorias paginas internas
+@import "carrusel_logos"; // Módulo slider logos
+@import "comprar_en_ml"; // Módulo comprar por ML
+
+// @import "slider_clock"; // Contenedor reloj slider header, habilitar si llega a usarse
+//@import "beneficios"; // Pagina de beneficios, lo mas seguro es que no se use, anular en caso de que asi sea

@@ -1,0 +1,51 @@
+.menu__mobile {
+	// Triangulo
+	&.open::before {
+		content: '';
+		pointer-events: none;
+
+		position: absolute;
+		top: -16px;
+		right: 21px;
+
+		width:0px;
+		height:0px;
+
+		border-top: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-bottom: 8px solid $brand-primary;
+		border-left: 8px solid transparent;
+	}
+
+	// Menu desplgable
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 20px;
+		border: 0;
+
+		li {
+			display: block;
+			padding: 0;
+			line-height: 40px;
+
+			// Separador
+			&:nth-child(3):after {
+				content: "";
+				display: block;
+				height: 1px;
+				width: 100%;
+				margin: 10px 0;
+				background: white;
+				left: 10px;
+			}
+
+			a {
+				padding: 0;
+				color: #fff;
+				font-size: 18px;
+				line-height: 1;
+			}
+		}
+	}
+}
