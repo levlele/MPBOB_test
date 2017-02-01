@@ -37,10 +37,10 @@ var build = {
     js: "build/js/main.js",
     img: "build/img/**/*",
     html: "build/index.html",
-    // json: "build/test.json",
     // json: "build/17_01_20_home_deco.json",
     // json: "build/17_01_23_exclusiva_grisino.json",
-    json: "build/17_01_24_compartida_hotday_mshops.json"
+    // json: "build/17_01_24_compartida_hotday_mshops.json",
+    json: "build/test.json"
 };
 
 var dist = {

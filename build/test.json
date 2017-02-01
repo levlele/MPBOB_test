@@ -3,12 +3,14 @@
 
   "promo_is_on": true,
   "promo_url": "https://www.mercadopago.com/org-img/MP3/promociones/ar/2017/HotDays_MShops/landing/",
-  
+
   "counter_is_on": false,
 
   "galeria": {
     "mpbox_descuento_boton": true,
-    "mpbox_nombre_boton": false
+    "mpbox_nombre_boton": false,
+    "mpbox_logo": true,
+    "mpbox_psj": false
   },
 
   "slides": {
@@ -17,10 +19,10 @@
     "src_large_00": "img/header/slide_large_00.jpg",
     "alt_00": "Fácil quererlo, fácil tenerlo",
 
-    "src_small_01": "img/01_24_compartida_hotdays_mshops/slide_small_01_b.jpg",
-    "src_medium_01": "img/01_24_compartida_hotdays_mshops/slide_medium_01.jpg",
-    "src_large_01": "img/01_24_compartida_hotdays_mshops/slide_large_01.jpg",
-    "alt_01": "Hasta 70% OFF en productos seleccionados",
+    "src_small_01": "img/header/slide_small_01.jpg",
+    "src_medium_01": "img/header/slide_medium_01.jpg",
+    "src_large_01": "img/header/slide_large_01.jpg",
+    "alt_01": "Hasta 50% OFF en productos seleccionados",
 
     "link": false,
     "href": "#"
@@ -110,8 +112,8 @@
       "alt": "Garden life",
       "href": "http://www.shop.gardenlife.me/?utm_source=exclusivaMP&utm_medium=mail#173271614",
 
-      "logo": "img/01_24_compartida_hotdays_mshops/logo_gardenlife.jpg",
-      "img": "img/01_24_compartida_hotdays_mshops/gardenlife.jpg",
+      "logo": "img/productos/logo_gardenlife.jpg",
+      "img": "img/productos/gardenlife.jpg",
 
       "psj_12x": false,
       "psj_3x": false,
@@ -141,8 +143,8 @@
       "alt": "Simones",
       "href": "http://www.simones.com.ar/?utm_source=exclusivaMP&utm_medium=mail#188455481",
 
-      "logo": "img/01_24_compartida_hotdays_mshops/logo_simones.jpg",
-      "img": "img/01_24_compartida_hotdays_mshops/simones.jpg",
+      "logo": "img/productos/logo_simones.jpg",
+      "img": "img/productos/simones.jpg",
 
       "psj_12x": false,
       "psj_3x": false,
@@ -172,8 +174,8 @@
       "alt": "Trabuco",
       "href": "http://www.trabucohogar.com.ar/?utm_source=exclusivaMP&utm_medium=mail#142111908",
 
-      "logo": "img/01_24_compartida_hotdays_mshops/logo_trabuco.jpg",
-      "img": "img/01_24_compartida_hotdays_mshops/trabuco.jpg",
+      "logo": "img/productos/logo_trabuco.jpg",
+      "img": "img/productos/trabuco.jpg",
 
       "psj_12x": true,
       "psj_3x": false,
@@ -203,8 +205,8 @@
       "alt": "Ansila",
       "href": "http://www.ansila.com.ar/?utm_source=exclusivaMP&utm_medium=mail#75482619",
 
-      "logo": "img/01_24_compartida_hotdays_mshops/logo_ansila.jpg",
-      "img": "img/01_24_compartida_hotdays_mshops/ansila.jpg",
+      "logo": "img/productos/logo_ansila.jpg",
+      "img": "img/productos/ansila.jpg",
 
       "psj_12x": false ,
       "psj_3x": false,
@@ -234,8 +236,8 @@
       "alt": "Elepants",
       "href": "http://www.elepants.com.ar?utm_source=MercadoPago&utm_campaign=FlashSale&utm_medium=Mailing#148381980",
 
-      "logo": "img/01_24_compartida_hotdays_mshops/logo_elepants.jpg",
-      "img": "img/01_24_compartida_hotdays_mshops/elepants.jpg",
+      "logo": "img/productos/logo_elepants.jpg",
+      "img": "img/productos/elepants.jpg",
 
       "psj_12x": false,
       "psj_3x": false,
@@ -265,8 +267,8 @@
       "alt": "Morph",
       "href": "http://www.morph.com.ar?utm_source=exclusivaMP&utm_medium=mail#148976079",
 
-      "logo": "img/01_24_compartida_hotdays_mshops/logo_morph.jpg",
-      "img": "img/01_24_compartida_hotdays_mshops/morph.jpg",
+      "logo": "img/productos/logo_morph.jpg",
+      "img": "img/productos/morph.jpg",
 
       "psj_12x": false,
       "psj_3x": false,
@@ -296,8 +298,8 @@
       "alt": "Malibu Outfitters",
       "href": "http://www.malibuoutfitters.com.ar/?utm_source=exclusivaMP&utm_medium=mail#189192934",
 
-      "logo": "img/01_24_compartida_hotdays_mshops/logo_malibu.jpg",
-      "img": "img/01_24_compartida_hotdays_mshops/malibu.jpg",
+      "logo": "img/productos/logo_malibu.jpg",
+      "img": "img/productos/malibu.jpg",
 
       "psj_12x": false,
       "psj_3x": false,
@@ -327,8 +329,8 @@
       "alt": "Miux",
       "href": "http://www.miux.com.ar/?utm_source=exclusivaMP&utm_medium=mail#148381980",
 
-      "logo": "img/01_24_compartida_hotdays_mshops/logo_miux.jpg",
-      "img": "img/01_24_compartida_hotdays_mshops/miux.jpg",
+      "logo": "img/productos/logo_miux.jpg",
+      "img": "img/productos/miux.jpg",
 
       "psj_12x": true,
       "psj_3x": false,
@@ -552,14 +554,6 @@
       "highlight": true,
       "active": true
     }, {
-      "src": "img/logo/indumentaria_pasotti.png",
-      "href": "http://www.pasotti.com.ar/ ",
-      "alt": "Pasotti",
-      "title": "Pasotti",
-      "id": "Pasotti",
-      "highlight": true,
-      "active": true
-    }, {
       "src": "img/logo/indumentaria_viru.png",
       "href": "http://www.viru.com.ar/ ",
       "alt": "Viru",
@@ -656,6 +650,14 @@
       "id": "Muaa",
       "highlight": false,
       "active": true
+    }, {
+      "src": "img/logo/indumentaria_ginebra.png",
+      "href": "http://www.ginebrabsas.com/",
+      "alt": "Ginebra",
+      "title": "Ginebra",
+      "id": "Ginebra",
+      "highlight": false,
+      "active": true
     }
   ],
 
@@ -735,6 +737,14 @@
       "alt": "Rever Pass",
       "title": "Rever Pass",
       "id": "ReverPass",
+      "active": true
+    }, {
+      "src": "img/logo/indumentaria_pasotti.png",
+      "href": "http://www.pasotti.com.ar/ ",
+      "alt": "Pasotti",
+      "title": "Pasotti",
+      "id": "Pasotti",
+      "highlight": true,
       "active": true
     }
   ],
@@ -990,6 +1000,14 @@
       "alt": "Desillas",
       "title": "Desillas",
       "id": "Desillas",
+      "highlight": true,
+      "active": true
+    }, {
+      "src": "img/logo/homedeco_nylman.png",
+      "href": "http://nylmandeco.design/",
+      "alt": "Nylman Deco",
+      "title": "Nylman Deco",
+      "id": "NylmanDeco",
       "highlight": true,
       "active": true
     }, {

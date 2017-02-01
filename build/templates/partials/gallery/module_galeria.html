@@ -6,10 +6,12 @@
 			{# Mostrar si mpbox_descuento_boton = true #}
 			{% if galeria.mpbox_descuento_boton %}
 			<div class="gallery__item">
+				{% if galeria.mpbox_logo %}
 				{% if producto.logo %}
 				<div class="item__logo">
 					<img src="{{promo_url}}{{producto.logo}}" alt="{{producto.alt}}">
 				</div>
+				{% endif %}
 				{% endif %}
 				<div class="item__img">
 					<a id="promociones-{{producto.id}}-img" href="{{producto.href|safe}}" title="{{producto.title}}" target="_blank">
